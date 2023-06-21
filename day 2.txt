@@ -1,0 +1,376 @@
+
+use test
+switched to db test
+db . testcollection . insert ( { ld: I } )
+db.testCollection.insert({Id:2, name: 'karthi', gender: 'm', age: '20'})
+db.testCollection.insert({Id:3, name: 'raghul', gender: 'm', age: '20'})
+db.testCollection.insert({Id:4, name: 'naveen', gender: 'm', age: '19'})
+db.testCollection.insert({Id:5, name: 'kumar', gender: 'm', age: '19'})
+db.testCollection.insert({Id:6, name: 'jhon', gender: 'm', age: '30'})
+db.testCollection.find()
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+
+db.testCollection.updateOne({Id:1}, { $set: {name:'mith',gender:'m',age:'20'}})
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1,
+  age: '20',
+  gender: 'm',
+  name: 'mith'
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+db.testCollection.insertMany([{Id:7, name: 'krishna', gender: 'm', age: '19'} , {Id:8, name: 'varadhan', gender: 'm', age: '20'} , {Id:9, name: 'mohan', gender: 'm', age: '19'}])
+db.testCollection.find()
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1,
+  age: '20',
+  gender: 'm',
+  name: 'mith'
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532173"),
+  Id: 8,
+  name: 'varadhan',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532174"),
+  Id: 9,
+  name: 'mohan',
+  gender: 'm',
+  age: '19'
+}
+db.testCollection.deleteOne({Id:9})
+db.testCollection.find()
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1,
+  age: '20',
+  gender: 'm',
+  name: 'mith'
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532173"),
+  Id: 8,
+  name: 'varadhan',
+  gender: 'm',
+  age: '20'
+}
+db.testCollection.findOne({'name':'krishna'})
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}
+db.testCollection.find({'age' : {"$in" : ['30','19']} })
+{ś
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}ś
+
+
+===============================================================================================================================
+
+
+db.testCollection.find().sort({age:1})
+
+
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532173"),
+  Id: 8,
+  name: 'varadhan',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1,
+  age: '20',
+  gender: 'm',
+  name: 'mith'
+}
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+
+db.testCollection.find().sort({age:1})
+
+{
+  _id: ObjectId("64916d7ac68ccf9563532171"),
+  Id: 6,
+  name: 'jhon',
+  gender: 'm',
+  age: '30'
+}
+{
+  _id: ObjectId("64916cccc68ccf956353216d"),
+  Id: 2,
+  name: 'karthi',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916d03c68ccf956353216e"),
+  Id: 3,
+  name: 'raghul',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532173"),
+  Id: 8,
+  name: 'varadhan',
+  gender: 'm',
+  age: '20'
+}
+{
+  _id: ObjectId("64916ba8c68ccf956353216c"),
+  Id: 1,
+  age: '20',
+  gender: 'm',
+  name: 'mith'
+}
+{
+  _id: ObjectId("64916d18c68ccf956353216f"),
+  Id: 4,
+  name: 'naveen',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64916d25c68ccf9563532170"),
+  Id: 5,
+  name: 'kumar',
+  gender: 'm',
+  age: '19'
+}
+{
+  _id: ObjectId("64917024c68ccf9563532172"),
+  Id: 7,
+  name: 'krishna',
+  gender: 'm',
+  age: '19'
+}

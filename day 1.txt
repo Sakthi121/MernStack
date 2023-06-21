@@ -1,0 +1,27 @@
+day 1
+
+create table tablee (ids integer,name text,subject text,mark integer);
+insert into tablee values(1,"a","tamil",81);
+insert into tablee values(2,"b","english",83);
+insert into tablee values(3,"c","maths",84);
+insert into tablee values(4,"d","phys",82);
+insert into tablee values(5,"e","chem",85);
+insert into tablee values(6,"f","biology",86);
+
+create table tablem (id integer,name text,place text,age integer);
+insert into tablem values(1,"a","covai",81);
+insert into tablem values(2,"b","namak",53);
+insert into tablem values(3,"c","poy",71);
+insert into tablem values(4,"d","selam",82);
+insert into tablem values(5,"e","palak",22);
+insert into tablem values(6,"f","kanchi",86);
+
+  select mark from tablee inner join tablem on tablee.mark=tablem.age;
+ select tablee.ids from tablee left join tablem on tablee.mark=tablem.age;
+  select mark from tablee right join tablem on tablee.mark=tablem.age;
+  select * from tablee cross join tablem on tablee.mark=tablem.age;
+
+select sum(mark) from tablee;
+select avg(mark) from tablee;
+select count(mark) from tablee where mark>83;
+select * from tablee order by mark asc;
